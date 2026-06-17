@@ -1,6 +1,6 @@
-module d.core.foundations.unit_test.calculator.test.calculatorrectests;
+module d.core.foundations.numbers.test.numbersrectests;
 
-import calculator;
+import numbers;
 
 unittest
 {
