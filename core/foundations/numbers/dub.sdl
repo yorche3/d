@@ -1,0 +1,7 @@
+name "numbers"
+description "A minimal D application."
+authors "yorche3"
+copyright "Copyright © 2026, yorche3"
+license "MIT"
+
+sourceFiles "source/*.d" "test/*.d"
