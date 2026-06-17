@@ -1,0 +1,17 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/numbers
+numbers.so
+numbers.dylib
+numbers.dll
+libnumbers.a
+numbers.a
+numbers.lib
+numbers-test-*
+*.exe
+*.pdb
+*.o
+*.obj
+*.lst
