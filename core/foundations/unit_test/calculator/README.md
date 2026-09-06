@@ -2,7 +2,7 @@
 
 Implementación de la especificación [03_Unit_Test_Calculator](https://yorche3.github.io/programming_languages/core/foundations/03_Unit_Test_Calculator/) en **D (DMD)**, compilado con **dmd** y probado con **unittest** integrado.
 
-Implementa 5 operaciones aritméticas (`addition`, `substraction`, `multiplication`, `division`, `modulus`) usando únicamente `+` y `-` como operaciones primitivas.
+Implementa 5 operaciones aritméticas (`addition`, `subtraction`, `multiplication`, `division`, `modulus`) usando únicamente `+` y `-` como operaciones primitivas.
 
 ---
 
@@ -33,14 +33,14 @@ calculator/
 **ES:** Este proyecto usa **D** con `dub.sdl` y el framework de testing integrado `unittest`.
 
 Características:
-- **5 operaciones**: `addition`, `substraction`, `multiplication`, `division`, `modulus`.
+- **5 operaciones**: `addition`, `subtraction`, `multiplication`, `division`, `modulus`.
 - **Implementación minimalista**: `multiplication`, `division` y `modulus` se construyen usando solo `+` y `-` como operaciones primitivas.
 - **Framework de tests**: `unittest` integrado en D — los tests se ejecutan con `dub test`.
 
 **EN:** This project uses **D** with `dub.sdl` and the built-in `unittest` testing framework.
 
 Features:
-- **5 operations**: `addition`, `substraction`, `multiplication`, `division`, `modulus`.
+- **5 operations**: `addition`, `subtraction`, `multiplication`, `division`, `modulus`.
 - **Minimalist implementation**: `multiplication`, `division` and `modulus` are built using only `+` and `-` as primitive operations.
 - **Test framework**: `unittest` built into D — tests run with `dub test`.
 
@@ -72,7 +72,7 @@ int addition(int a, int b) {
     return a + b;
 }
 
-int substraction(int a, int b) {
+int subtraction(int a, int b) {
     return a - b;
 }
 
@@ -87,7 +87,7 @@ int multiplication(int a, int b) {
 int division(int a, int b) {
     int quotient = 0;
     while (a >= b) {
-        a = substraction(a, b);
+        a = subtraction(a, b);
         quotient = addition(quotient, 1);
     }
     return quotient;
@@ -95,7 +95,7 @@ int division(int a, int b) {
 
 int modulus(int a, int b) {
     int quotient = division(a, b);
-    return substraction(a, multiplication(quotient, b));
+    return subtraction(a, multiplication(quotient, b));
 }
 ```
 
@@ -151,7 +151,7 @@ All unit tests have been run successfully.
 | Operación | Implementación | Primitivas usadas |
 |-----------|---------------|-------------------|
 | `addition(a, b)` | `a + b` | `+` |
-| `substraction(a, b)` | `a - b` | `-` |
+| `subtraction(a, b)` | `a - b` | `-` |
 | `multiplication(a, b)` | Suma repetitiva de `a`, `b` veces | `+` |
 | `division(a, b)` | Resta repetitiva, cuenta cociente | `+`, `-` |
 | `modulus(a, b)` | `a - (cociente * b)` | `+`, `-` |
