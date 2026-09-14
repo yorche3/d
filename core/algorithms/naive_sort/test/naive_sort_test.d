@@ -1,4 +1,4 @@
-module d.core.algorithms.naive_sort.test.naivesorttests;
+module naive_sort_test;
 
 import naive_sort;
 
