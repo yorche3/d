@@ -1,0 +1,17 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/naive_sort
+naive_sort.so
+naive_sort.dylib
+naive_sort.dll
+libnaive_sort.a
+naive_sort.a
+naive_sort.lib
+naive_sort-test-*
+*.exe
+*.pdb
+*.o
+*.obj
+*.lst

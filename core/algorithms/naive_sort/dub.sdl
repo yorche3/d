@@ -1,0 +1,8 @@
+name "naive_sort"
+description "A minimal D application."
+authors "yorche3"
+copyright "Copyright © 2026, yorche3"
+license "Unlicense"
+
+targetType "library"
+sourceFiles "source/*.d" "test/*.d"
