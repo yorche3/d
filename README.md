@@ -11,6 +11,7 @@ Usa `dub.sdl` como manifiesto de proyecto y **unittest** (integrado en el lengua
 | Módulo | Descripción |
 |--------|-------------|
 | [`core/foundations/`](core/foundations/) | **Fase 0 — Fundamentos**: `helloworld`, `hellouser`, `calculator`, `numbers` |
+| [`core/algorithms/`](core/algorithms/) | **Fase 1 — Algoritmos Puros**: `naive_sort` |
 
 ---
 
@@ -31,6 +32,10 @@ dub test
 
 # Numbers Tests
 cd core/foundations/numbers
+dub test
+
+# Naive Sort Tests
+cd core/algorithms/naive_sort
 dub test
 ```
 
