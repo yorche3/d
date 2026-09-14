@@ -9,7 +9,7 @@ unittest
 
 unittest
 {
-    assert(substraction(5, 2) == 3);
+    assert(subtraction(5, 2) == 3);
 }
 
 unittest
