@@ -31,22 +31,78 @@ class LinkedList
         this._count = 0;
     }
 
-    @property int headValue() {
-        return FAILURE_VALUE;
-    }
     @property bool isEmpty() { return this._count == 0; }
     @property size_t size() { return this._count; }
+    @property int headValue() {
+        if (isEmpty)
+        {
+            return FAILURE_VALUE;
+        }
+        return this._head.value;
+    }
 
     void insertHead(int value)
     {
+        auto newNode = new Node(value);
+        if (isEmpty)
+        {
+            this._head = newNode;
+            this._tail = newNode;
+        }
+        else
+        {
+            newNode.next = this._head;
+            this._head = newNode;
+        }
+        this._count++;
     }
 
     void insertTail(int value)
     {
+        auto newNode = new Node(value);
+        if (isEmpty)
+        {
+            this._head = newNode;
+            this._tail = newNode;
+        }
+        else
+        {
+            this._tail.next = newNode;
+            this._tail = newNode;
+        }
+        this._count++;
     }
 
     bool deleteValue(int value)
     {
+        Node previous = null;
+        Node current = this._head;
+        while (current !is null)
+        {
+            if (current.value == value)
+            {
+                if (previous is null)
+                {
+                    this._head = current.next;
+                    if (this._head is null)
+                    {
+                        this._tail = null;
+                    }
+                }
+                else
+                {
+                    previous.next = current.next;
+                    if (previous.next is null)
+                    {
+                        this._tail = previous;
+                    }
+                }
+                this._count--;
+                return true;
+            }
+            previous = current;
+            current = current.next;
+        }
         return false;
     }
 }
@@ -67,16 +123,38 @@ class Stack
 
     void push(int value)
     {
+        auto newNode = new Node(value);
+        if (isEmpty)
+        {
+            this._top = newNode;
+        }
+        else
+        {
+            newNode.next = this._top;
+            this._top = newNode;
+        }
+        this._count++;
     }
 
     int peek()
     {
-        return FAILURE_VALUE;
+        if (isEmpty)
+        {
+            return FAILURE_VALUE;
+        }
+        return this._top.value;
     }
 
     int pop()
     {
-        return FAILURE_VALUE;
+        if (isEmpty)
+        {
+            return FAILURE_VALUE;
+        }
+        auto value = this._top.value;
+        this._top = this._top.next;
+        this._count--;
+        return value;
     }
 }
 
@@ -98,15 +176,42 @@ class Queue
 
     void enqueue(int value)
     {
+        auto newNode = new Node(value);
+        if (isEmpty)
+        {
+            this._front = newNode;
+            this._rear = newNode;
+        }
+        else
+        {
+            this._rear.next = newNode;
+            this._rear = newNode;
+        }
+        this._count++;
     }
 
     int peek()
     {
-        return FAILURE_VALUE;
+        if (isEmpty)
+        {
+            return FAILURE_VALUE;
+        }
+        return this._front.value;
     }
 
     int dequeue()
     {
-        return FAILURE_VALUE;
+        if (isEmpty)
+        {
+            return FAILURE_VALUE;
+        }
+        auto value = this._front.value;
+        this._front = this._front.next;
+        if (this._front is null)
+        {
+            this._rear = null;
+        }
+        this._count--;
+        return value;
     }
 }
