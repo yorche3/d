@@ -171,7 +171,7 @@ dub test
 
 ```text
              Generating test runner configuration 'naive_sort-test-library' for 'library' (library).
-    Starting Performing "unittest" build using /home/yorche3/dlang/dmd-2.112.0/linux/bin64/dmd for x86_64.
+    Starting Performing "unittest" build using ~/dlang/dmd-2.112.0/linux/bin64/dmd for x86_64.
   Up-to-date naive_sort ~master: target for configuration [naive_sort-test-library] is up to date.
     Finished To force a rebuild of up-to-date targets, run again with --force
      Running naive_sort-test-library 
