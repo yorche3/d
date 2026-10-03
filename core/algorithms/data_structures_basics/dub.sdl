@@ -1,5 +1,7 @@
 name "data_structures_basics"
-description "A minimal D application."
+description "Basic linked data structures."
 authors "yorche3"
 copyright "Copyright © 2026, yorche3"
 license "proprietary"
+
+targetType "library"
