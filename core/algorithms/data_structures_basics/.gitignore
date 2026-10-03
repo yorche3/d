@@ -1,0 +1,17 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/data_structures_basics
+data_structures_basics.so
+data_structures_basics.dylib
+data_structures_basics.dll
+libdata_structures_basics.a
+data_structures_basics.a
+data_structures_basics.lib
+data_structures_basics-test-*
+*.exe
+*.pdb
+*.o
+*.obj
+*.lst
