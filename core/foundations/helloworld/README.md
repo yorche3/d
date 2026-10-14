@@ -8,7 +8,7 @@ Implementación de la especificación [01_Hello_World](https://yorche3.github.io
 
 | Archivo | Propósito |
 |---------|-----------|
-| [`hello_world.d`](hello_world.d) | Código fuente: imprime `"Hello World! from D"` en la consola. |
+| [`hello_world.d`](hello_world.d) | Código fuente: imprime `"Hello, World! from D!"` en la consola. |
 
 **Estructura de directorios esperada:**
 
@@ -50,7 +50,7 @@ Features:
 import std.stdio;
 
 void main() {
-   writefln("Hello World! from D");
+   writefln("Hello, World! from D!");
 }
 ```
 
