@@ -1,0 +1,17 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/data_structures_advanced
+data_structures_advanced.so
+data_structures_advanced.dylib
+data_structures_advanced.dll
+libdata_structures_advanced.a
+data_structures_advanced.a
+data_structures_advanced.lib
+data_structures_advanced-test-*
+*.exe
+*.pdb
+*.o
+*.obj
+*.lst
