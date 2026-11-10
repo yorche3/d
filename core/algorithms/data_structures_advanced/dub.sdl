@@ -1,5 +1,7 @@
 name "data_structures_advanced"
-description "A minimal D application."
+description "Advanced data structures: binary search tree and directed graph."
 authors "yorche3"
 copyright "Copyright © 2026, yorche3"
 license "proprietary"
+
+targetType "library"

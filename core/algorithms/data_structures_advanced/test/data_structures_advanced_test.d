@@ -1,0 +1,3 @@
+module data_structures_advanced_test;
+
+import data_structures_advanced;
