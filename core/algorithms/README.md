@@ -12,6 +12,7 @@ Los módulos de esta fase usan **indicadores de fallo compatibles con el lenguaj
 |--------|---------------|---------|:-----:|:------:|
 | [`naive_sort/`](naive_sort/) | [05_Naive_Sort](https://yorche3.github.io/programming_languages/core/algorithms/05_Naive_Sort/) | `dub test` + `dub.sdl` + `unittest` | 3 | ✅ |
 | [`data_structures_basics/`](data_structures_basics/) | [06_Data_Structures_Basics](https://yorche3.github.io/programming_languages/core/algorithms/06_Data_Structures_Basics/) | `dub test` + `dub.sdl` + `unittest` | 4 | ✅ |
+| [`data_structures_advanced/`](data_structures_advanced/) | [07_Data_Structures_Advanced](https://yorche3.github.io/programming_languages/core/algorithms/07_Data_Structures_Advanced/) | `dub test` + `dub.sdl` + `unittest` | 23 | ✅ |
 
 ---
 
@@ -27,12 +28,20 @@ algorithms/
 │   │   └── naive_sort_test.d     # 3 tests (unittest)
 │   ├── .gitignore
 │   └── README.md
-└── data_structures_basics/       # 06_Data_Structures_Basics
+├── data_structures_basics/       # 06_Data_Structures_Basics
+│   ├── dub.sdl                   # Manifiesto (targetType "library")
+│   ├── source/
+│   │   └── data_structures_basics.d # Node, LinkedList, Stack, Queue
+│   ├── test/
+│   │   └── data_structures_basic_test.d # 4 tests (unittest)
+│   ├── .gitignore
+│   └── README.md
+└── data_structures_advanced/     # 07_Data_Structures_Advanced
     ├── dub.sdl                   # Manifiesto (targetType "library")
     ├── source/
-    │   └── data_structures_basics.d # Node, LinkedList, Stack, Queue
+    │   └── data_structures_advanced.d # Node, TreeNode, BinaryTree, GraphNode, Graph
     ├── test/
-    │   └── data_structures_basic_test.d # 4 tests (unittest)
+    │   └── data_structures_advanced_test.d # 23 tests (unittest)
     ├── .gitignore
     └── README.md
 ```
@@ -62,6 +71,10 @@ dub test
 
 # Data Structures Basics Tests
 cd data_structures_basics
+dub test
+
+# Data Structures Advanced Tests
+cd data_structures_advanced
 dub test
 ```
 
